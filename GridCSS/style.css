@@ -1,0 +1,51 @@
+ h1{ /*Diminuí a margem do h1 pra zero pra conseguir inclur a imagem do topo sem bordas*/
+  margin: 0px;
+ }
+
+ .h1{ /*Tô tentando alinhar o texto dentro da imagem mas esqueci completamente como faço isso*/
+  
+  text-align: center;
+  font-size: large;
+  align-items: center;
+  background-image: url("Imagens/Imagem2.png");
+  background-repeat: no-repeat; /*Impede que a foto se repita várias vezes*/
+  background-size: cover; /*Faz a foto tomas todo o espaço do div*/
+  margin: 0px;
+  padding: 0px;
+  height: 80px;
+  size: 80px;
+  height: 100px;
+ }
+ 
+ body {
+      font-family: Arial, sans-serif; /*definição da fonte das palavras do título*/
+      background-color: #D6E4FF; /*cor de fundo*/
+      color: #000000; /*cor da fonte*/
+      margin: 0px;
+      padding: 0px;
+      margin-top: 0px;
+ }
+
+
+.grid-container-columns {
+  display: grid; /* ativa o grid */
+  grid-template-columns: auto auto auto; /* 3 colunas iguais */
+  gap: 20px; /* espaço entre os itens */
+  
+}
+
+.grid-container-rows{
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.item {
+  background: #3cb6ae;
+  margin: 60px;
+  padding: 60px;
+  height: 40px;  
+  text-align: center;
+  border-radius: 8px;
+  background-image: url("Imagens/degrade.png"); /*Teste com e sem a imagem, depois fale se acha melhor com ou sem*/  
+}
+
