@@ -1,51 +1,120 @@
- h1{ /*Diminuí a margem do h1 pra zero pra conseguir inclur a imagem do topo sem bordas*/
+/*Estilização do título principal*/
+h1 {
   margin: 0px;
- }
+  text-align: center; /*Centraliza o texto*/
+}
 
- .h1{ /*Tô tentando alinhar o texto dentro da imagem mas esqueci completamente como faço isso*/
-  
+.h1 {
+  display: flex; /*alinhamento flexível dos conteúdos internos*/
+  justify-content: center; /*Centraliza o conteúdo horizontalmente*/
+  align-items: center; /*Centraliza o conteúdo verticalmente*/
   text-align: center;
   font-size: large;
-  align-items: center;
+
+  /* Imagem de fundo */
   background-image: url("Imagens/Imagem2.png");
-  background-repeat: no-repeat; /*Impede que a foto se repita várias vezes*/
+  background-repeat: no-repeat;/*impede que a foto se repita*/
   background-size: cover; /*Faz a foto tomas todo o espaço do div*/
+  background-position: center; /*Centraliza a imagem*/
+  
   margin: 0px;
   padding: 0px;
-  height: 80px;
-  size: 80px;
-  height: 100px;
- }
- 
- body {
-      font-family: Arial, sans-serif; /*definição da fonte das palavras do título*/
-      background-color: #D6E4FF; /*cor de fundo*/
-      color: #000000; /*cor da fonte*/
-      margin: 0px;
-      padding: 0px;
-      margin-top: 0px;
- }
+  height: 100px; /*Altura fixa para a seção do h1 com imagem*/
+}
 
+/*Estilo geral da página*/
+body {
+  font-family: Arial, sans-serif; /*Fonte da página*/
+  background-color: #D6E4FF; /*Cor de fundo clara*/
+  color: #000000; /*Cor do texto padrão*/
+  margin: 0px;
+  padding: 0px;
+}
 
+/*Layout com grid de colunas (3 colunas)*/
 .grid-container-columns {
-  display: grid; /* ativa o grid */
-  grid-template-columns: auto auto auto; /* 3 colunas iguais */
-  gap: 20px; /* espaço entre os itens */
-  
+  display: grid;/*inicia o grid*/
+  grid-template-columns: auto auto auto; /*Três colunas de largura automática*/
+  gap: 20px; /*Espaçamento entre as colunas*/
+  padding: 20px;
 }
 
-.grid-container-rows{
+/*Layout com grid de linhas (3 linhas)*/
+.grid-container-rows {
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto; 
+  row-gap: 30px; 
+  padding: 20px;
 }
 
+/* Estilo dos itens dentro dos grids */
 .item {
   background: #3cb6ae;
-  margin: 60px;
-  padding: 60px;
-  height: 40px;  
+  margin: 10px;
+  padding: 60px; 
+  height: 40px; 
   text-align: center;
-  border-radius: 8px;
-  background-image: url("Imagens/degrade.png"); /*Teste com e sem a imagem, depois fale se acha melhor com ou sem*/  
+  border-radius: 8px; 
+  
+  /* Imagem de fundo com efeito degradê */
+  background-image: url("Imagens/degrade.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+/* Layout de áreas nomeadas com CSS Grid */
+.grid-template-areas {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "aside article"
+    "section section"
+    "footer footer";
+  grid-template-columns: 1fr 1fr; /* Duas colunas com larguras iguais */
+  grid-template-rows: auto; /* Altura automática */
+  gap: 20px; /* Espaçamento geral entre os elementos */
+  padding: 100px;
+  grid-auto-rows: 100px; /* Altura padrão para linhas automáticas */
+}
+
+/* Estilização das áreas nomeadas */
+
+/* Cabeçalho */
+header {
+  grid-area: header;
+  background-color: chartreuse;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Barra lateral (esquerda) */
+aside {
+  grid-area: aside;
+  background-color: #931f1d;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Conteúdo principal */
+article {
+  grid-area: article;
+  background-color: #49306b;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Seção complementar */
+section {
+  grid-area: section;
+  background-color: #8a5264;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Rodapé */
+footer {
+  grid-area: footer;
+  background-color: #f0c808;
+  padding: 20px;
+  text-align: center;
+}

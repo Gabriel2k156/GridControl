@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GridControl</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GridControl</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<div class="h1">   
-  <div id="sla"><h1>CSS Grid</h1></div>
-</div>
 
 <body>
 
-<h2>O que é CSS Grid?</h2>
-<ul>
-  <li>O CSS Grid é um sistema de layout bidimensional que possibilita a criação<br> de estruturas de páginas organizadas em
-  linhas e colunas de maneira simples e <br> flexível.
-  Ele simplifica o posicionamento de elementos na tela, possibilitando a<br> criação de layouts que vão desde os mais simples
-  até os mais complexos, com<br> maior controle do que outros métodos, como float ou flexbox.
-  </li>
-  </ul>
+  <div class="h1">   
+    <div id="sla"><h1>CSS Grid</h1></div>
+  </div>
 
-  <h2>Funções principais</h2>
-  <h3>Grid-template-columns</h3>
-  <h4>Basicamente define o número e tamanho das colunas da grade, possui algumas variações, como por exemplo... </h4>
-  <h4>grid-template-columns: auto / Cria colunas com tamanho proporcional ao conteiner e a tela.</h4>
+  <h1 class="centralizado">O que é CSS Grid?</h1>
+  <br>
+  <br>
+  <h3>
+    O CSS Grid é um sistema de layout bidimensional que possibilita a criação<br> de estruturas de páginas organizadas em
+      linhas e colunas de maneira simples e <br> flexível.
+      Ele simplifica o posicionamento de elementos na tela, possibilitando a<br> criação de layouts que vão desde os mais simples
+      até os mais complexos, com<br> maior controle do que outros métodos, como float ou flexbox.
+  </h3>
+<br>
+  <h1>Funções principais</h1>
+  <br>
+  <br>
+  <h2>Grid-template-columns</h2>
+  <h3>Basicamente define o número e tamanho das colunas da grade, possui algumas variações, como por exemplo... </h3>
+  <h3>grid-template-columns: auto / Cria colunas com tamanho proporcional ao contêiner e à tela.</h3>
 
+  <div class="grid-container-columns">
+    <div class="item" src="Imagens/Imagem1.png"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
 
-<div class="grid-container-columns">
-  <div class="item" src="Imagens/Imagem1.png"></div>
-  <div class="item"></div>
-  <div class="item"></div>
-</div>
+  <h2>Grid-template-rows</h2>
+  <h3>É uma propriedade CSS usada para definir quantas linhas o layout Grid terá e a altura de cada uma delas.</h3>
+  <h3>grid-template-rows: auto / Cria linhas verticais com tamanho proporcional ao contêiner e à tela.</h3>
 
+  <div class="grid-container-rows">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
 
-<h4>Grid-template-rows</h4>
-<h4>É uma propriedade CSS em que você usa para definir quantas linhas seu layout Grid terá e qual será a altura de cada uma delas.</h4>
-<h4>grid-template-rows: auto / Cria colunas na vertical com tamanho proporcional ao conteiner e a tela.</h4>
+  <h2>Grid-template-areas</h2>
+  <br>
+  <br>
+  <h3>
+    é uma propriedade do CSS Grid Layout que oferece uma maneira,<br> intuitiva e visual de definir a estrutura do seu layout de grade<br> nomeando as áreas dentro do grid. Em vez de posicionar os itens<br> individualmente com linhas e colunas, você pode desenhar o layout<br> diretamente no seu CSS, usando nomes para cada área.<br>Abaixo temos um exemplo a respeito:
+  </h3>
 
-<div class="grid-container-rows">
-  <div class="item"></div>
-  <div class="item"></div>
-  <div class="item"></div>
-</div>
-
+  <div class="grid-template-areas">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <article>Article</article>
+    <section>Section</section>
+    <footer>Footer</footer>
+  </div>
 
 </body>
 </html>
